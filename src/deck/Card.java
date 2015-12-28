@@ -13,6 +13,7 @@ public class Card
 
 	public enum Rank
 	{
+		ACE,
 		TWO,
 		THREE,
 		FOUR,
@@ -48,7 +49,21 @@ public class Card
 	 */
 	public int getValue()
 	{
-		return 0;
+		switch(this.rank)
+		{
+		case ACE:
+			return 11;
+		case THREE:
+			return 10;
+		case KING:
+			return 4;
+		case KNIGHT:
+			return 3;
+		case KNAVE:
+			return 2;
+		default:
+			return 0;
+		}
 	}
 	
 	/*
