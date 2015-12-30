@@ -27,11 +27,13 @@ public class Card
 	
 	private Suit suit;
 	private Rank rank;
+	private boolean isBriscola;
 	
 	public Card(Suit suit, Rank rank)
 	{
 		this.suit = suit;
 		this.rank = rank;
+		this.isBriscola = false;
 	}
 	
 	public Rank getRank()
@@ -67,10 +69,24 @@ public class Card
 	}
 	
 	/*
+	 * Whether this card's suit is the same as the briscola's
+	 */
+	public boolean isBriscola()
+	{
+		return false;
+	}
+	
+	/*
 	 * Return true if this card is better than the given card.
 	 */
 	public boolean isBetter(Card card)
 	{
+		/* if this isn't the briscola but the other card is */
+		if( !this.isBriscola() && card.isBriscola() )
+		{
+			return false;
+		}
+		
 		return false;
 	}
 }
