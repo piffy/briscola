@@ -1,37 +1,26 @@
 package deck;
 
-public class Card
-{
-	public enum Suit
-	{
-		//
-	}
-	
-	public enum Rank
-	{
-		//
-	}
-	
-	protected Suit suit;
-	protected Rank rank;
+public abstract class Card
+{	
+	protected CardSuit suit;
+	protected CardRank rank;
 	
 	protected Card()
 	{
-		//
 	}
 	
-	public Card(Suit suit, Rank rank)
+	public Card(CardSuit suit, CardRank rank)
 	{
 		this.suit = suit;
 		this.rank = rank;
 	}
 	
-	public Rank getRank()
+	public CardRank getRank()
 	{
 		return rank;
 	}
 	
-	public Suit getSuit()
+	public CardSuit getSuit()
 	{
 		return suit;
 	}

@@ -1,36 +1,11 @@
 package deck;
 
-import deck.Card.Rank;
-import deck.Card.Suit;
-
 public class BriscolaCard extends Card
 {
-	public enum Suit
-	{
-		SWORDS,
-		CUPS,
-		COINS,
-		CLUBS,
-		BRISCOLA,
-	}
-
-	public enum Rank
-	{
-		ACE,
-		TWO,
-		THREE,
-		FOUR,
-		FIVE,
-		SIX,
-		SEVEN,
-		KNAVE,
-		KNIGHT,
-		KING,
-	}
-
+	// TODO: this is dependent on game state
 	private boolean isBriscola;
 	
-	public BriscolaCard(Suit suit, Rank rank)
+	public BriscolaCard(CardSuit suit, CardRank rank)
 	{
 		this.suit = suit;
 		this.rank = rank;
@@ -42,21 +17,30 @@ public class BriscolaCard extends Card
 	 */
 	public int getValue()
 	{
-		switch(this.rank)
+		int rank = this.rank.ordinal();
+		
+		if( rank == BriscolaCardRank.BriscolaRank.ACE.ordinal() )
 		{
-		case ACE:
 			return 11;
-		case THREE:
-			return 10;
-		case KING:
-			return 4;
-		case KNIGHT:
-			return 3;
-		case KNAVE:
-			return 2;
-		default:
-			return 0;
 		}
+		if( rank == BriscolaCardRank.BriscolaRank.THREE.ordinal() )
+		{
+			return 10;
+		}
+		if( rank == BriscolaCardRank.BriscolaRank.KING.ordinal() )
+		{
+			return 4;
+		}
+		if( rank == BriscolaCardRank.BriscolaRank.KNIGHT.ordinal() )
+		{
+			return 3;
+		}
+		if( rank == BriscolaCardRank.BriscolaRank.KNAVE.ordinal() )
+		{
+			return 2;
+		}
+	
+		return 0;
 	}
 	
 	/*
