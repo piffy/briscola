@@ -1,5 +1,7 @@
 package deck;
 
+import java_card.CardRank;
+
 public class BriscolaCardRank implements CardRank
 {
 	public enum BriscolaRank

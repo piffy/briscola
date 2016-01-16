@@ -1,5 +1,9 @@
 package deck;
 
+import java_card.Card;
+import java_card.CardRank;
+import java_card.CardSuit;
+
 public class BriscolaCard extends Card
 {
 	// TODO: this is dependent on game state

@@ -2,7 +2,7 @@ package game;
 
 import java.util.ArrayList;
 
-import deck.Card;
+import java_card.Card;
 
 public interface IPlayer
 {
