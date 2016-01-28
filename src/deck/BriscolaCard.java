@@ -3,17 +3,17 @@ package deck;
 import java_card.Card;
 import java_card.CardRank;
 import java_card.CardSuit;
+import java_card.Deck;
 
-public class BriscolaCard extends Card
+public class BriscolaCard extends Card implements Comparable
 {
-	// TODO: this is dependent on game state
-	private boolean isBriscola;
+	// TODO: set this in the constructor?
+	private Deck deck;
 	
 	public BriscolaCard(CardSuit suit, CardRank rank)
 	{
 		this.suit = suit;
 		this.rank = rank;
-		this.isBriscola = false;
 	}
 	
 	/*
@@ -52,7 +52,7 @@ public class BriscolaCard extends Card
 	 */
 	public boolean isBriscola()
 	{
-		return false;
+		return ((BriscolaGame)deck.getGame()).getBriscola() == this.suit;
 	}
 	
 	/*
@@ -67,5 +67,11 @@ public class BriscolaCard extends Card
 		}
 		
 		return false;
+	}
+
+	public int compareTo(Object obj)
+	{
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
