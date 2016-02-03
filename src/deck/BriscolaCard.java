@@ -5,7 +5,7 @@ import java_card.CardRank;
 import java_card.CardSuit;
 import java_card.Deck;
 
-public class BriscolaCard extends Card implements Comparable
+public class BriscolaCard extends Card
 {
 	// TODO: set this in the constructor?
 	private Deck deck;
@@ -57,6 +57,7 @@ public class BriscolaCard extends Card implements Comparable
 	
 	/*
 	 * Return true if this card is better than the given card.
+	 * TODO: move into compareTo
 	 */
 	public boolean isBetter(BriscolaCard card)
 	{
@@ -69,9 +70,9 @@ public class BriscolaCard extends Card implements Comparable
 		return false;
 	}
 
-	public int compareTo(Object obj)
+	public int compareTo(Card card)
 	{
-		// TODO Auto-generated method stub
+		// TODO: implement
 		return 0;
 	}
 }
