@@ -1,21 +1,10 @@
 package deck;
 
 import java_card.Card;
-import java_card.CardRank;
-import java_card.CardSuit;
 import java_card.Deck;
 
 public class BriscolaCard extends Card
-{
-	// TODO: set this in the constructor?
-	private Deck deck;
-	
-	public BriscolaCard(CardSuit suit, CardRank rank)
-	{
-		this.suit = suit;
-		this.rank = rank;
-	}
-	
+{	
 	/*
 	 * Return the card's value for totaling
 	 */
@@ -52,7 +41,7 @@ public class BriscolaCard extends Card
 	 */
 	public boolean isBriscola()
 	{
-		return ((BriscolaGame)deck.getGame()).getBriscola() == this.suit;
+		return ((BriscolaGame)this.game).getBriscola() == this.suit;
 	}
 	
 	/*
