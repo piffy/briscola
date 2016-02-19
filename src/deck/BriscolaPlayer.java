@@ -8,13 +8,15 @@ import java_card.ICard;
 
 public class BriscolaPlayer extends CardPlayer
 {
-	@Override
-	public ICard play(Collection<ICard> played) {
+	public ICard play(Collection<ICard> played)
+	{
 		return ((ArrayList<ICard>)this.hand).get(0);
 	}
 
+	// TODO: something more substantial is needed here - need to know who has played what
 	public void seePlayedHand(Collection<ICard> hand)
 	{
-		// TODO: implement
+		boolean briscolaPlayedByOpposition = false;
+		boolean briscolaPlayedByTeamMate = false;
 	}
 }
