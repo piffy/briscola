@@ -4,18 +4,17 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import java_card.CardPlay;
-import java_card.CardPlayer;
 import java_card.CardTeamPlayer;
 import java_card.ICard;
 
 public class BriscolaPlayer extends CardTeamPlayer
 {
-	public ICard play(Collection<ICard> played)
+	public ICard play(Collection<CardPlay> played)
 	{
 		return ((ArrayList<ICard>)this.hand).get(0);
 	}
 
-	// TODO: something more substantial is needed here - need to know who has played what
+	// TODO: move this logic into play?
 	public void seePlayedCards(Collection<CardPlay> playedCards)
 	{
 		boolean briscolaPlayedByOpposition = false;
