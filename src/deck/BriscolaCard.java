@@ -1,7 +1,7 @@
 package deck;
 
+import game.BriscolaGame;
 import java_card.Card;
-import java_card.Deck;
 
 public class BriscolaCard extends Card
 {	

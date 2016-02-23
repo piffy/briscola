@@ -6,19 +6,20 @@ import java.util.Collection;
 import java_card.CardPlay;
 import java_card.CardTeamPlayer;
 import java_card.ICard;
+import java_card.Team;
 
 public class BriscolaPlayer extends CardTeamPlayer
 {
-	public ICard play(Collection<CardPlay> played)
+	public BriscolaPlayer(Team team)
 	{
-		return ((ArrayList<ICard>)this.hand).get(0);
+		super(team);
 	}
 
-	// TODO: move this logic into play?
-	public void seePlayedCards(Collection<CardPlay> playedCards)
+	public ICard play(Collection<CardPlay> playedCards)
 	{
 		boolean briscolaPlayedByOpposition = false;
 		boolean briscolaPlayedByTeamMate = false;
+		int place = playedCards.size();
 		
 		for (CardPlay play: playedCards)
 		{
@@ -30,5 +31,12 @@ public class BriscolaPlayer extends CardTeamPlayer
 				briscolaPlayedByTeamMate = true;
 			}
 		}
+		
+		return ((ArrayList<ICard>)this.hand).get(0);
+	}
+
+	public void seePlayedCards(Collection<CardPlay> playedCards)
+	{
+		// TODO: needed?
 	}
 }
