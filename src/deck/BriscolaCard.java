@@ -10,7 +10,7 @@ public class BriscolaCard extends Card
 	 */
 	public int getValue()
 	{
-		int rank = this.rank.ordinal();
+		int rank = this.getRank().ordinal();
 		
 		if( rank == BriscolaCardRank.BriscolaRank.ACE.ordinal() )
 		{
@@ -41,7 +41,7 @@ public class BriscolaCard extends Card
 	 */
 	public boolean isBriscola()
 	{
-		return ((BriscolaGame)this.game).getBriscola() == this.suit;
+		return ((BriscolaGame)this.getGame()).getBriscola() == this.getSuit();
 	}
 	
 	/*

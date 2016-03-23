@@ -1,8 +1,8 @@
 package deck;
 
-import java_card.CardSuit;
+import java_card.ICardSuit;
 
-public class BriscolaCardSuit implements CardSuit
+public class BriscolaCardSuit implements ICardSuit
 {
 	public enum BriscolaSuit
 	{

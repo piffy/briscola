@@ -3,7 +3,7 @@ package game;
 import java.util.Collection;
 
 import java_card.CardGame;
-import java_card.CardSuit;
+import java_card.ICardSuit;
 
 public class BriscolaGame extends CardGame
 {
@@ -13,7 +13,7 @@ public class BriscolaGame extends CardGame
 	
 	protected Collection<BriscolaTeam> teams;
 	
-	protected CardSuit briscola;
+	protected ICardSuit briscola;
 	
 	public BriscolaGame()
 	{
@@ -21,7 +21,7 @@ public class BriscolaGame extends CardGame
 		teams.add(new BriscolaTeam(2, TEAM_PLAYERS));
 	}
 	
-	public CardSuit getBriscola()
+	public ICardSuit getBriscola()
 	{
 		return this.briscola;
 	}

@@ -26,13 +26,13 @@ public class BriscolaPlayer extends CardTeamPlayer
 			BriscolaPlayer player = (BriscolaPlayer)play.getPlayer();
 			BriscolaCard card = (BriscolaCard)play.getCard();
 			
-			if (player.getTeam().equals(this.team) && card.isBriscola())
+			if (player.getTeam().equals(this.getTeam()) && card.isBriscola())
 			{
 				briscolaPlayedByTeamMate = true;
 			}
 		}
 		
-		return ((ArrayList<ICard>)this.hand).get(0);
+		return ((ArrayList<ICard>)this.getHand()).get(0);
 	}
 
 	public void seePlayedCards(Collection<CardPlay> playedCards)
