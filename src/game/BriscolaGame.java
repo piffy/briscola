@@ -25,4 +25,9 @@ public class BriscolaGame extends CardGame
 	{
 		return this.briscola;
 	}
+
+	public Collection<BriscolaTeam> getTeams()
+	{
+		return this.teams;
+	}
 }
