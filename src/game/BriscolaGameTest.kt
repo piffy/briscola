@@ -1,8 +1,7 @@
 package game
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 class BriscolaGameTest {
 

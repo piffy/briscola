@@ -1,5 +1,6 @@
 package game;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import java_card.CardGame;
@@ -17,6 +18,7 @@ public class BriscolaGame extends CardGame
 	
 	public BriscolaGame()
 	{
+		teams = new ArrayList<BriscolaTeam>(2);
 		teams.add(new BriscolaTeam(1, TEAM_PLAYERS));
 		teams.add(new BriscolaTeam(2, TEAM_PLAYERS));
 	}
