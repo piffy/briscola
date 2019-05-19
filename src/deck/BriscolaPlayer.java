@@ -1,21 +1,15 @@
 package deck;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
+import game.BriscolaCardPlay;
 import java_card.CardPlay;
 import java_card.CardTeamPlayer;
 import java_card.ICard;
-import java_card.Team;
 
 public class BriscolaPlayer extends CardTeamPlayer
 {
-	public BriscolaPlayer(Team team)
-	{
-		super(team);
-	}
-
-	public ICard play(Collection<CardPlay> playedCards)
+	public ICard play(List<CardPlay> playedCards)
 	{
 		boolean briscolaPlayedByOpposition = false;
 		boolean briscolaPlayedByTeamMate = false;
@@ -25,17 +19,12 @@ public class BriscolaPlayer extends CardTeamPlayer
 		{
 			BriscolaPlayer player = (BriscolaPlayer)play.getPlayer();
 			BriscolaCard card = (BriscolaCard)play.getCard();
-			
-			if (player.getTeam().equals(this.getTeam()) && card.isBriscola())
-			{
-				briscolaPlayedByTeamMate = true;
-			}
 		}
 		
-		return ((ArrayList<ICard>)this.getHand()).get(0);
+		return this.getHand().get(0);
 	}
 
-	public void seePlayedCards(Collection<CardPlay> playedCards)
+	public void seePlayedCards(List<CardPlay> playedCards)
 	{
 		// TODO: needed?
 	}

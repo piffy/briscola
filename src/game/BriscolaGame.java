@@ -27,11 +27,10 @@ public class BriscolaGame extends CardGame
 		BriscolaTeam team2 = new BriscolaTeam(2, TEAM_PLAYERS);
 		this.teams.add(team2);
 
-		// TODO: messy - teams have players which have teams
-		team1.addPlayer(new BriscolaPlayer(team1));
-		team1.addPlayer(new BriscolaPlayer(team1));
-		team2.addPlayer(new BriscolaPlayer(team2));
-		team2.addPlayer(new BriscolaPlayer(team2));
+		team1.addPlayer(new BriscolaPlayer());
+		team1.addPlayer(new BriscolaPlayer());
+		team2.addPlayer(new BriscolaPlayer());
+		team2.addPlayer(new BriscolaPlayer());
 	}
 
 	public void deal()
